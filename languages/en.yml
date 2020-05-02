@@ -15,15 +15,15 @@ menu:
   search: Search
   schedule: Schedule
   sitemap: Sitemap
-  commonweal: Commonweal 404
+  commonweal: 4♡4
 
 sidebar:
   overview: Overview
   toc: Table of Contents
 
 post:
-  posted: Posted on
-  edited: Edited on
+  posted: Posted
+  edited: Edited
   created: Created
   modified: Modified
   edit: Edit this post
@@ -99,8 +99,13 @@ accessibility:
   next_page: Next page
 
 symbols_count_time:
-  count: Symbols count in article
-  count_total: Symbols count total
-  time: Reading time
-  time_total: Reading time total
+  count: Word Count
+  count_total: Word Count Total
+  time: Reading Time
+  time_total: Reading Time Total
   time_minutes: mins.
+
+# Easily enable fast Ajax navigation on your website.
+# Dependencies: https://github.com/theme-next/theme-next-pjax
+pjax: true
+darkmode: true

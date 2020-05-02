@@ -1,3 +1,6 @@
 [submodule "source/lib/darkmode-js"]
 	path = source/lib/darkmode-js
 	url = https://github.com/sandoche/Darkmode.js.git
+[submodule "source/lib/pjax"]
+	path = source/lib/pjax
+	url = https://github.com/theme-next/theme-next-pjax

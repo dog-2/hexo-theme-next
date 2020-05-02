@@ -13,4 +13,7 @@ source/lib/*
 !source/lib/font-awesome/
 !source/lib/anime.min.js
 !source/lib/velocity/
+
+# submodlues added by myself
 !source/lib/darkmode-js
+!source/lib/pjax
