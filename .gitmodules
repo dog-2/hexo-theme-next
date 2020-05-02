@@ -4,3 +4,6 @@
 [submodule "source/lib/pjax"]
 	path = source/lib/pjax
 	url = https://github.com/theme-next/theme-next-pjax
+[submodule "source/lib/pace"]
+	path = source/lib/pace
+	url = https://github.com/theme-next/theme-next-pace
