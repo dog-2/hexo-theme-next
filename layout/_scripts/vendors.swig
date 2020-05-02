@@ -41,7 +41,64 @@
   <script size="{{ theme.canvas_ribbon.size }}" alpha="{{ theme.canvas_ribbon.alpha }}" zIndex="{{ theme.canvas_ribbon.zIndex }}" src="{{ canvas_ribbon_uri }}"></script>
 {%- endif %}
 
+
+
+{# Customize darkmode.js - Declaration #}
+{%- if theme.darkmode_js %}
+  {# another way load js from CDN
+  {%- set darkmode_js_uri = theme.vendors.darkmode_js %}
+  <script src="{{ darkmode_js_uri }}"></script>
+  #}
+  {%- set js_vendors = js_vendors | attr('darkmode_js', 'darkmode-js/lib/darkmode-js.min.js') %}
+  <style>
+  {# fix bug that switch button can not be clicked #}
+  button.darkmode-toggle {
+  z-index: 9999;
+  }
+  {# fix bug that image color is also inverted #}
+  img, .darkmode-ignore {
+    isolation: isolate;
+    display: block;
+  }
+  </style>
+{%- endif %}
+
 {%- for name, internal in js_vendors %}
   {%- set internal_script = next_vendors(internal) %}
   <script src="{{ theme.vendors[name] or internal_script }}"></script>
 {%- endfor %}
+
+
+{# Customize darkmode.js - Invokation #}
+{%- if theme.darkmode_js %}
+<script>
+var options = {
+  bottom: '64px', // default: '32px'
+  right: 'unset', // default: '32px'
+  left: '32px', // default: 'unset'
+  time: '0.5s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#fff',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: false, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true // default: true
+}
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+// window.onload = function(){
+//   setTimeout(
+//     function() {
+//       document.getElementsByClassName('darkmode-toggle')[0].click();
+//     },
+//     550,
+//   );
+//   document.getElementsByClassName('darkmode-toggle')[0].click();
+// }
+</script>
+
+
+
+
+{%- endif %}

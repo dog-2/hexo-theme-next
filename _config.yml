@@ -991,7 +991,13 @@ vendors:
   # canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js
   canvas_ribbon:
 
-# Assets
+  #darkmode_js: https://cdn.jsdelivr.net/npm/darkmode-js/lib/darkmode-js.min.js
+  darkmode_js:
+
+    # Assets
 css: css
 js: js
 images: images
+
+# darkmode.js
+darkmode_js: true
